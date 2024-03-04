@@ -1,3 +1,5 @@
+'use client'
+
 const Loading = () => {
   return (
     <div className="max-w-3xl mx-auto">
@@ -5,7 +7,7 @@ const Loading = () => {
         Loading...
       </h2>
     </div>
-  )
-}
+  );
+};
 
 export default Loading
