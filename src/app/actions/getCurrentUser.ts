@@ -11,18 +11,23 @@ export const getCurrentUser = async () => {
     }
 
     // get login user
-    const response = await prisma.user.findUnique({
+    const currentUser = await prisma.user.findUnique({
       where: {
         email: session.user.email,
       },
     });
 
-    if (!response) {
+    if (!currentUser) {
       return null
     }
 
-    return response;
-    
+    const { hashedPassword, ...rest } = currentUser;
+    return {
+      ...rest,
+      createdAt: currentUser.createdAt?.toISOString(),
+      updatedAt: currentUser.updatedAt?.toISOString() || null,
+      emailVerified: currentUser.emailVerified?.toISOString() || null,
+    }
   } catch (error) {
     return null
   }

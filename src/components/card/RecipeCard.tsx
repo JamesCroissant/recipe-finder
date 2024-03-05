@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { User } from '@prisma/client';
+import { SafeUser } from '@/types/userType';
 import { Recipe } from '@/types/recipeType';
 import { getCurrentUser } from '@/app/actions/getCurrentUser';
 
@@ -9,7 +9,7 @@ import { getCurrentUser } from '@/app/actions/getCurrentUser';
 type RecipeCardProps = {
   recipe: Recipe;
   onSelect: (recipeId: number) => void;
-  currentUser: User | null;
+  currentUser: SafeUser | null;
 };
 
 export const RecipeCard = ({recipe, onSelect, currentUser }: RecipeCardProps) => {
