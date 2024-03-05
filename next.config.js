@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     domains: ['lh3.googleusercontent.com', 'res.cloudinary.com', 'spoonacular.com'],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma.client', 'bcryptjs'],
+  },
 }
 
   

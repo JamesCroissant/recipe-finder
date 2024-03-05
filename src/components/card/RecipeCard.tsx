@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import FavoriteButton from '@/components/button/FavoriteButton';
 import { User } from '@prisma/client';
 import { Recipe } from '@/types/recipeType';
 import { getCurrentUser } from '@/app/actions/getCurrentUser';
@@ -30,12 +29,6 @@ export const RecipeCard = ({recipe, onSelect, currentUser }: RecipeCardProps) =>
             className="rounded-xl"
           />
           <h3>{recipe.title}</h3>
-        </div>
-        <div className="absolute bottom-10 right-8">
-          <FavoriteButton 
-            recipeId={recipe.id}
-            currentUser={currentUser}
-          />
         </div>
       </div>
     </>

@@ -10,8 +10,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'My Personal Chef App',
-  description: 'you can see your favorite recipe',
+  title: 'Recipe Finder',
+  description: 'find your favorite recipe',
 }
 
 export default async function RootLayout({
@@ -34,7 +34,7 @@ export default async function RootLayout({
             {children}
           <footer className="py-5">
             <div className="text-center text-sm">
-              Copyright © All rights reserved | My Personal Chef App
+              Copyright © All rights reserved | Recipe Finder
             </div>
           </footer>
         </AuthContext>
