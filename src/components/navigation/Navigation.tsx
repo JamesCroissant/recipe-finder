@@ -3,11 +3,11 @@
 import Link from "next/link"
 import React from "react"
 import { Menu } from '@/components/navigation/Menu'
-import { User } from '@prisma/client'
+import { SafeUser } from '@/types/userType';
 
 
 type NavigationProps = {
-  currentUser : User | null,
+  currentUser : SafeUser | null,
 }
 
 export const Navigation = ({ currentUser }: NavigationProps) => {
