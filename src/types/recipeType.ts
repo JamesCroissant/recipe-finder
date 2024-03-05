@@ -19,5 +19,3 @@ export type RecipeDetailModalProps = {
   open: boolean;
   onClose: () => void;
 }
-
-// userのお気に入りレシピを保存する機能を作成したいです。
