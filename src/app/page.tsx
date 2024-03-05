@@ -20,6 +20,7 @@ export default function Home() {
   const [hasSearched, setHasSearched] = useState<boolean>(false)
   const [selectedRecipeDetail, setSelectedRecipeDetail] = useState<RecipeDetail | null>(null)
 
+
   const fetchRecipes = async (ingredient: string) => {
     if (!ingredient) return
     try {
@@ -31,7 +32,6 @@ export default function Home() {
         throw new Error('Network response was not ok')
       }
       const data  = await response.json()
-      console.log(data)
       const formattedData = data.map((recipe: any) => ({
         ...recipe,
         recipeId: recipe.id,
@@ -70,6 +70,7 @@ export default function Home() {
   const handleClose = () => {
     setOpen(false);
   };
+
 
   return (
     <>
