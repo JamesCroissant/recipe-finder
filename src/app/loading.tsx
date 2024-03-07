@@ -1,11 +1,10 @@
 'use client'
+import { FadeLoader } from "react-spinners";
 
 const Loading = () => {
   return (
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-xl md:text-6xl text-center font-semibold mt-10">
-        Loading...
-      </h2>
+    <div className="flex justify-center my-16">
+      <FadeLoader color="#22c55e" />
     </div>
   );
 };
